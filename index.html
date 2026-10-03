@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOCUS CLASSES | Official Education Portal (Class 9th-12th Maths)</title>
+    <title>LOCUS CLASSES | Official Learning Portal (Class 9th-12th Maths)</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -14,11 +14,10 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .hindi-font { font-family: 'Tiro Devanagari Hindi', serif; }
         
-        .govt-navy { background-color: #032b56; }
-        .govt-navy-dark { background-color: #001a36; }
-        .govt-accent { color: #d97706; }
-        .bg-govt-accent { background-color: #d97706; }
-        .border-govt-navy { border-color: #032b56; }
+        .upsc-navy { background-color: #0a2540; }
+        .upsc-navy-dark { background-color: #051b30; }
+        .upsc-gold { color: #c59b27; }
+        .bg-upsc-gold { background-color: #c59b27; }
 
         .tricolor-strip {
             background: linear-gradient(90deg, #ff9933 0%, #ffffff 50%, #128807 100%);
@@ -28,20 +27,20 @@
         .portal-card {
             background: #ffffff;
             border: 1px solid #cbd5e1;
-            border-top: 4px solid #032b56;
+            border-top: 4px solid #0a2540;
             transition: all 0.2s ease-in-out;
         }
         .portal-card:hover {
-            border-top-color: #d97706;
-            box-shadow: 0 10px 25px -5px rgba(3, 43, 86, 0.15);
+            border-top-color: #c59b27;
+            box-shadow: 0 10px 25px -5px rgba(10, 37, 64, 0.15);
             transform: translateY(-3px);
         }
 
         .tab-btn.active {
-            background-color: #032b56;
+            background-color: #0a2540;
             color: #ffffff;
             font-weight: 700;
-            border-color: #032b56;
+            border-color: #0a2540;
         }
 
         /* News Ticker Animation */
@@ -57,6 +56,15 @@
         .animate-ticker:hover {
             animation-play-state: paused;
         }
+
+        /* Carousel Styles */
+        .carousel-slide {
+            display: none;
+            transition: opacity 0.6s ease-in-out;
+        }
+        .carousel-slide.active {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-slate-100 text-slate-800 flex flex-col min-h-screen antialiased">
@@ -64,12 +72,12 @@
     <!-- Official Tricolor Top Border -->
     <div class="tricolor-strip"></div>
 
-    <!-- Top Govt-Style Announcement Bar -->
-    <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-700">
+    <!-- Top Govt-Style Utility Bar -->
+    <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
             <div class="flex items-center space-x-2">
                 <span class="bg-amber-500 text-slate-950 px-2 py-0.5 rounded text-[10px] font-extrabold uppercase">अकादमिक सत्र 2026-27</span>
-                <span class="font-semibold text-slate-300">लोकस क्लासेस - 9वीं से 12वीं गणित शिक्षण केंद्र (CBSE & UP Board)</span>
+                <span class="font-semibold text-slate-300">लोकस क्लासेस - 9वीं से 12वीं गणित शिक्षण संस्थान (CBSE & UP Board)</span>
             </div>
             <div class="flex items-center space-x-4 text-xs font-bold">
                 <a href="tel:9027126704" class="hover:text-amber-400 transition flex items-center gap-1"><i class="fa-solid fa-phone text-amber-400"></i> हेल्पलाइन: 9027126704</a>
@@ -79,17 +87,17 @@
         </div>
     </div>
 
-    <!-- Main Header Banner (UPSSSC Style Header) -->
+    <!-- Main Header Banner (UPSC Portal Style Header) -->
     <header class="bg-white border-b-2 border-slate-200 py-4 px-4 sm:px-8">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center space-x-4">
-                <!-- Emblem / Symbol Badge -->
+                <!-- Emblem Badge -->
                 <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full border-4 border-slate-200 flex items-center justify-center text-white shadow-md flex-shrink-0">
-                    <i class="fa-solid fa-building-columns text-2xl"></i>
+                    <i class="fa-solid fa-landmark text-2xl"></i>
                 </div>
                 <div>
-                    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight heading-font">LOCUS <span class="text-blue-900">CLASSES</span></h1>
-                    <p class="text-xs text-amber-700 font-bold uppercase tracking-wider hindi-font">उत्कृष्ट गणित शिक्षण संस्थान (कक्षा 9वीं-12वीं)</p>
+                    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">LOCUS <span class="text-blue-900">CLASSES</span></h1>
+                    <p class="text-xs text-amber-700 font-bold uppercase tracking-wider hindi-font">उच्च माध्यमिक गणित शिक्षण आयोग (कक्षा 9वीं-12वीं)</p>
                     <p class="text-[11px] text-slate-500">Kurali, Meerut (U.P.) & Online Learning Academy</p>
                 </div>
             </div>
@@ -97,7 +105,7 @@
             <!-- Quick Action Badges -->
             <div class="flex items-center space-x-3 text-xs font-bold">
                 <a href="#demo-form" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-4 py-2.5 rounded shadow-sm flex items-center gap-2 border border-amber-600">
-                    <i class="fa-solid fa-pen-to-square"></i> ऑनलाइन प्रवेश / रजिस्ट्रेशन
+                    <i class="fa-solid fa-pen-to-square"></i> ऑनलाइन प्रवेश / पंजीकरण
                 </a>
                 <a href="https://wa.me/919027126704" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded shadow-sm flex items-center gap-2">
                     <i class="fa-brands fa-whatsapp text-sm"></i> व्हाट्सएप्प सहायता
@@ -106,15 +114,15 @@
         </div>
     </header>
 
-    <!-- Navigation Bar (UPSSSC Navy Bar) -->
-    <nav class="govt-navy text-white sticky top-0 z-50 shadow-md border-b-2 border-amber-500">
+    <!-- Navigation Bar (UPSC Navy Bar) -->
+    <nav class="upsc-navy text-white sticky top-0 z-50 shadow-md border-b-2 border-amber-500">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex items-center justify-between h-14 text-xs font-bold uppercase tracking-wider overflow-x-auto">
                 <div class="flex space-x-1 sm:space-x-6 whitespace-nowrap">
                     <a href="#" class="bg-amber-500 text-slate-950 px-4 py-4 flex items-center gap-1 font-extrabold"><i class="fa-solid fa-house"></i> मुख्य पृष्ठ</a>
-                    <a href="#about-teacher" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-user-tie"></i> संस्थापक (Sachin Sir)</a>
-                    <a href="#classes" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-layer-group"></i> कक्षा/बैच विवरण</a>
-                    <a href="#videos" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-circle-play"></i> वीडियो कोर्स</a>
+                    <a href="#about-teacher" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-user-tie"></i> निर्देशक (Sachin Sir)</a>
+                    <a href="#classes" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-layer-group"></i> शैक्षणिक बैच</a>
+                    <a href="#videos" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-circle-play"></i> वीडियो लेक्चर्स</a>
                     <a href="#pdfs" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-folder-open"></i> अध्ययन सामग्री (PDF)</a>
                     <a href="#testimonials" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-star"></i> परिणाम/समीक्षा</a>
                     <a href="#faqs" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-circle-question"></i> सामान्य प्रश्न</a>
@@ -126,7 +134,7 @@
     <!-- Latest Notice / Flash Ticker Bar -->
     <div class="bg-amber-100 border-b border-amber-300 py-2 px-4 overflow-hidden flex items-center">
         <div class="bg-amber-600 text-white text-[11px] font-extrabold px-3 py-1 rounded-r-md uppercase flex-shrink-0 z-10 flex items-center gap-1">
-            <i class="fa-solid fa-bullhorn animate-bounce"></i> सूचना पट्ट
+            <i class="fa-solid fa-bullhorn animate-bounce"></i> महत्वपूर्ण सूचना
         </div>
         <div class="overflow-hidden w-full ml-3">
             <div class="animate-ticker text-xs font-bold text-slate-800">
@@ -135,16 +143,70 @@
         </div>
     </div>
 
-    <!-- Hero Section (UPSSSC Portal Style) -->
+    <!-- 🌟 GITHUB DIRECT PHOTO SLIDER 🌟 -->
+    <section class="bg-slate-900 border-b-4 border-amber-500 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="relative w-full h-56 sm:h-80 md:h-96 rounded-lg overflow-hidden shadow-2xl border-2 border-slate-700">
+                
+                <!-- Slide 1 (GitHub image: photo1.jpg) -->
+                <div class="carousel-slide active w-full h-full relative">
+                    <img src="./photo1.jpg" alt="LOCUS CLASSES Campus Photo 1" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80';">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-transparent p-4 sm:p-6 text-white">
+                        <span class="bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2.5 py-0.5 rounded uppercase">लोकस क्लासेस मेरठ</span>
+                        <h3 class="text-base sm:text-2xl font-black mt-1">उत्कृष्ट शैक्षणिक वातावरण एवं आधुनिक क्लासरूम</h3>
+                        <p class="text-xs text-slate-300 hidden sm:block">कक्षा 9वीं से 12वीं के लिए समर्पित गणित शिक्षण केंद्र</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 (GitHub image: photo2.jpg) -->
+                <div class="carousel-slide w-full h-full relative">
+                    <img src="./photo2.jpg" alt="LOCUS CLASSES Classroom Photo 2" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80';">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-transparent p-4 sm:p-6 text-white">
+                        <span class="bg-blue-600 text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded uppercase">Sachin Sir Mentorship</span>
+                        <h3 class="text-base sm:text-2xl font-black mt-1">शॉर्टकट ट्रिक्स एवं NCERT समाधान की विशेष तकनीक</h3>
+                        <p class="text-xs text-slate-300 hidden sm:block">प्रत्येक छात्र पर व्यक्तिगत ध्यान एवं साप्ताहिक टेस्ट</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 (GitHub image: photo3.jpg) -->
+                <div class="carousel-slide w-full h-full relative">
+                    <img src="./photo3.jpg" alt="LOCUS CLASSES Results Photo 3" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80';">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-900/70 to-transparent p-4 sm:p-6 text-white">
+                        <span class="bg-emerald-600 text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded uppercase">100% Toppers Record</span>
+                        <h3 class="text-base sm:text-2xl font-black mt-1">सीबीएसई एवं यूपी बोर्ड परीक्षा परिणाम</h3>
+                        <p class="text-xs text-slate-300 hidden sm:block">10 वर्षों के पिछले प्रश्नपत्रों एवं मॉडल पेपर्स का अभ्यास</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 bg-slate-900/70 hover:bg-amber-500 hover:text-slate-950 text-white w-9 h-9 rounded-full flex items-center justify-center transition border border-slate-600 shadow-lg">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                </button>
+                <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-slate-900/70 hover:bg-amber-500 hover:text-slate-950 text-white w-9 h-9 rounded-full flex items-center justify-center transition border border-slate-600 shadow-lg">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                </button>
+
+                <!-- Indicator Dots -->
+                <div class="absolute top-4 right-4 flex space-x-2 bg-slate-900/80 px-3 py-1.5 rounded-full border border-slate-700">
+                    <span class="slide-dot w-2.5 h-2.5 rounded-full bg-amber-500 cursor-pointer" onclick="goToSlide(0)"></span>
+                    <span class="slide-dot w-2.5 h-2.5 rounded-full bg-slate-500 cursor-pointer" onclick="goToSlide(1)"></span>
+                    <span class="slide-dot w-2.5 h-2.5 rounded-full bg-slate-500 cursor-pointer" onclick="goToSlide(2)"></span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section (UPSC Portal Overview) -->
     <section class="py-10 bg-slate-200/60 border-b border-slate-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-8 items-start">
                 
-                <!-- Left Portal Welcome & Overview -->
+                <!-- Left Portal Overview -->
                 <div class="lg:col-span-7 space-y-5">
                     <div class="bg-white p-6 rounded-lg border border-slate-300 shadow-sm border-l-8 border-l-amber-500">
                         <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded border border-amber-200 inline-block mb-2">
-                            उत्तर प्रदेश बोर्ड एवं CBSE हेतु समर्पित केंद्र
+                            उत्तर प्रदेश बोर्ड एवं CBSE हेतु अधिकृत पोर्टल
                         </span>
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight hindi-font">
                             गणित में पाएं 100/100 अंक, आसान एवं सटीक ट्रिक्स के साथ!
@@ -183,14 +245,14 @@
                     </div>
                 </div>
 
-                <!-- Right Student Registration Form (Govt Portal Notice Style) -->
+                <!-- Right Student Registration Form -->
                 <div id="demo-form" class="lg:col-span-5 bg-white rounded border-2 border-slate-300 shadow-md overflow-hidden">
-                    <div class="govt-navy text-white p-4 flex justify-between items-center border-b-2 border-amber-500">
+                    <div class="upsc-navy text-white p-4 flex justify-between items-center border-b-2 border-amber-500">
                         <div class="flex items-center space-x-2">
                             <i class="fa-solid fa-id-card text-amber-400 text-lg"></i>
-                            <h3 class="font-extrabold text-sm uppercase tracking-wider hindi-font">विद्यार्थी पंजीकरण फॉर्म</h3>
+                            <h3 class="font-extrabold text-sm uppercase tracking-wider hindi-font">विद्यार्थी पंजीकरण पोर्टल</h3>
                         </div>
-                        <span class="bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2 py-0.5 rounded">निःशुल्क डेमो</span>
+                        <span class="bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2 py-0.5 rounded">3-Day Free Pass</span>
                     </div>
 
                     <form onsubmit="sendWhatsAppQuery(event)" class="p-5 space-y-3.5 bg-slate-50">
@@ -234,15 +296,15 @@
         </div>
     </section>
 
-    <!-- Founder / Educator Details (Govt Profile Card) -->
+    <!-- Founder / Educator Profile -->
     <section id="about-teacher" class="py-12 bg-white border-b border-slate-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="govt-navy rounded-lg p-6 sm:p-10 text-white shadow-md border-b-4 border-amber-500 flex flex-col md:flex-row items-center gap-8">
+            <div class="upsc-navy rounded-lg p-6 sm:p-10 text-white shadow-md border-b-4 border-amber-500 flex flex-col md:flex-row items-center gap-8">
                 
                 <!-- Founder Photo -->
                 <div class="relative flex-shrink-0">
                     <div class="w-36 h-36 sm:w-44 sm:h-44 rounded border-4 border-amber-400 bg-slate-800 p-1 shadow-lg">
-                        <img src="sachin-sir.jpg" alt="Sachin Sir - Founder LOCUS CLASSES" class="w-full h-full object-cover rounded" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Sachin+Sir&background=d97706&color=ffffff&size=180&font-size=0.33';">
+                        <img src="./sachin-sir.jpg" alt="Sachin Sir - Founder LOCUS CLASSES" class="w-full h-full object-cover rounded" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Sachin+Sir&background=c59b27&color=ffffff&size=180&font-size=0.33';">
                     </div>
                 </div>
 
@@ -261,7 +323,7 @@
         </div>
     </section>
 
-    <!-- Batches / Classes Section (Official Grid) -->
+    <!-- Batches / Classes Section -->
     <section id="classes" class="py-12 bg-slate-200/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10">
@@ -454,7 +516,7 @@
     </section>
 
     <!-- Study PDFs Section -->
-    <section id="pdfs" class="py-12 govt-navy text-white">
+    <section id="pdfs" class="py-12 upsc-navy text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10">
                 <span class="text-amber-400 font-extrabold uppercase tracking-wider text-xs bg-slate-800 px-3 py-1 rounded border border-slate-700">गूगल ड्राइव संग्रह</span>
@@ -584,14 +646,52 @@
         <i class="fa-brands fa-whatsapp text-3xl"></i>
     </a>
 
-    <!-- Official Govt-Style Footer -->
-    <footer class="govt-navy-dark text-slate-300 text-xs py-8 border-t-4 border-amber-500 text-center space-y-2">
+    <!-- Official UPSC Portal Style Footer -->
+    <footer class="upsc-navy-dark text-slate-300 text-xs py-8 border-t-4 border-amber-500 text-center space-y-2">
         <p>© LOCUS CLASSES by Sachin Sir (B.Sc., B.Ed.). Kurali, Meerut & Online Learning Portal.</p>
         <p class="text-slate-400">Class 9th, 10th, 11th & 12th Mathematics Specialist (CBSE & UP Board).</p>
     </footer>
 
-    <!-- Filter Script -->
+    <!-- Slider & Filter JavaScript -->
     <script>
+        // Photo Carousel Auto-Slider Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.slide-dot');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (dots[i]) {
+                    dots[i].classList.remove('bg-amber-500');
+                    dots[i].classList.add('bg-slate-500');
+                }
+            });
+
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            if (dots[currentSlide]) {
+                dots[currentSlide].classList.remove('bg-slate-500');
+                dots[currentSlide].classList.add('bg-amber-500');
+            }
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        // Auto slide every 4 seconds
+        setInterval(nextSlide, 4000);
+
+        // WhatsApp Query Script
         function sendWhatsAppQuery(event) {
             event.preventDefault();
             const name = document.getElementById('studentName').value;
@@ -604,6 +704,7 @@
             window.open(`https://wa.me/919027126704?text=${text}`, '_blank');
         }
 
+        // Tab Filter Script
         function filterClass(className) {
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
