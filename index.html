@@ -3,182 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathMatrix Academy | Premium Maths Coaching (Class 9th-12th)</title>
+    <title>LOCUS CLASSES | Official Education Portal (Class 9th-12th Maths)</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Tiro Devanagari Hindi & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .heading-font { font-family: 'Space Grotesk', sans-serif; }
+        .hindi-font { font-family: 'Tiro Devanagari Hindi', serif; }
         
-        .hero-bg {
-            background: radial-gradient(circle at 50% 10%, #1e1b4b 0%, #0f172a 60%, #020617 100%);
-        }
-        
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+        .govt-navy { background-color: #032b56; }
+        .govt-navy-dark { background-color: #001a36; }
+        .govt-accent { color: #d97706; }
+        .bg-govt-accent { background-color: #d97706; }
+        .border-govt-navy { border-color: #032b56; }
+
+        .tricolor-strip {
+            background: linear-gradient(90deg, #ff9933 0%, #ffffff 50%, #128807 100%);
+            height: 4px;
         }
 
-        .glass-nav {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+        .portal-card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-top: 4px solid #032b56;
+            transition: all 0.2s ease-in-out;
         }
-
-        .glow-effect {
-            box-shadow: 0 0 35px -5px rgba(99, 102, 241, 0.35);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #f59e0b 0%, #38bdf8 50%, #818cf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .portal-card:hover {
+            border-top-color: #d97706;
+            box-shadow: 0 10px 25px -5px rgba(3, 43, 86, 0.15);
+            transform: translateY(-3px);
         }
 
         .tab-btn.active {
-            background: #4f46e5;
+            background-color: #032b56;
             color: #ffffff;
-            box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
+            font-weight: 700;
+            border-color: #032b56;
+        }
+
+        /* News Ticker Animation */
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-ticker {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 25s linear infinite;
+        }
+        .animate-ticker:hover {
+            animation-play-state: paused;
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-slate-100 text-slate-800 flex flex-col min-h-screen antialiased">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-amber-500 via-indigo-600 to-blue-600 text-white text-xs sm:text-sm font-semibold py-2 px-4 shadow-md">
+    <!-- Official Tricolor Top Border -->
+    <div class="tricolor-strip"></div>
+
+    <!-- Top Govt-Style Announcement Bar -->
+    <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-700">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
             <div class="flex items-center space-x-2">
-                <span class="bg-slate-950 text-amber-300 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest border border-amber-400/30">✨ Admissions Open 2026-27</span>
-                <span>Class 9th to 12th Maths Batch (CBSE & UP Board)</span>
+                <span class="bg-amber-500 text-slate-950 px-2 py-0.5 rounded text-[10px] font-extrabold uppercase">अकादमिक सत्र 2026-27</span>
+                <span class="font-semibold text-slate-300">लोकस क्लासेस - 9वीं से 12वीं गणित शिक्षण केंद्र (CBSE & UP Board)</span>
             </div>
-            <div class="flex items-center space-x-4 text-xs">
-                <a href="tel:9027126704" class="hover:text-amber-200 transition flex items-center gap-1 font-bold"><i class="fa-solid fa-phone text-amber-300"></i> 9027126704</a>
+            <div class="flex items-center space-x-4 text-xs font-bold">
+                <a href="tel:9027126704" class="hover:text-amber-400 transition flex items-center gap-1"><i class="fa-solid fa-phone text-amber-400"></i> हेल्पलाइन: 9027126704</a>
                 <span>|</span>
-                <span>📍 Kurali, Meerut & Online</span>
+                <span>📍 कुराली, मेरठ एवं ऑनलाइन</span>
             </div>
         </div>
     </div>
 
-    <!-- Navigation Bar -->
-    <nav class="glass-nav border-b border-slate-800/80 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                
-                <!-- Premium Logo -->
-                <a href="#" class="flex items-center space-x-3 group">
-                    <div class="w-12 h-12 bg-gradient-to-tr from-indigo-600 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition duration-300 border border-indigo-400/30">
-                        <i class="fa-solid fa-shapes text-2xl text-white"></i>
-                    </div>
-                    <div>
-                        <h1 class="text-2xl font-extrabold tracking-tight heading-font text-white">MathMatrix <span class="text-indigo-400">Academy</span></h1>
-                        <p class="text-[10px] text-amber-400 font-bold tracking-widest uppercase">Class 9th–12th Maths Specialist</p>
-                    </div>
+    <!-- Main Header Banner (UPSSSC Style Header) -->
+    <header class="bg-white border-b-2 border-slate-200 py-4 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-4">
+                <!-- Emblem / Symbol Badge -->
+                <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full border-4 border-slate-200 flex items-center justify-center text-white shadow-md flex-shrink-0">
+                    <i class="fa-solid fa-building-columns text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight heading-font">LOCUS <span class="text-blue-900">CLASSES</span></h1>
+                    <p class="text-xs text-amber-700 font-bold uppercase tracking-wider hindi-font">उत्कृष्ट गणित शिक्षण संस्थान (कक्षा 9वीं-12वीं)</p>
+                    <p class="text-[11px] text-slate-500">Kurali, Meerut (U.P.) & Online Learning Academy</p>
+                </div>
+            </div>
+
+            <!-- Quick Action Badges -->
+            <div class="flex items-center space-x-3 text-xs font-bold">
+                <a href="#demo-form" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-4 py-2.5 rounded shadow-sm flex items-center gap-2 border border-amber-600">
+                    <i class="fa-solid fa-pen-to-square"></i> ऑनलाइन प्रवेश / रजिस्ट्रेशन
                 </a>
-                
-                <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-wider text-slate-300">
-                    <a href="#about-teacher" class="hover:text-indigo-400 transition">About Sachin Sir</a>
-                    <a href="#classes" class="hover:text-indigo-400 transition">Batches</a>
-                    <a href="#videos" class="hover:text-indigo-400 transition">Video Courses</a>
-                    <a href="#pdfs" class="hover:text-indigo-400 transition">Free Drive PDFs</a>
-                    <a href="#testimonials" class="hover:text-indigo-400 transition">Reviews</a>
-                    <a href="#demo-form" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black px-5 py-2.5 rounded-xl transition shadow-lg shadow-amber-500/20 uppercase tracking-wider">Book Free Demo 🚀</a>
+                <a href="https://wa.me/919027126704" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded shadow-sm flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> व्हाट्सएप्प सहायता
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar (UPSSSC Navy Bar) -->
+    <nav class="govt-navy text-white sticky top-0 z-50 shadow-md border-b-2 border-amber-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-14 text-xs font-bold uppercase tracking-wider overflow-x-auto">
+                <div class="flex space-x-1 sm:space-x-6 whitespace-nowrap">
+                    <a href="#" class="bg-amber-500 text-slate-950 px-4 py-4 flex items-center gap-1 font-extrabold"><i class="fa-solid fa-house"></i> मुख्य पृष्ठ</a>
+                    <a href="#about-teacher" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-user-tie"></i> संस्थापक (Sachin Sir)</a>
+                    <a href="#classes" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-layer-group"></i> कक्षा/बैच विवरण</a>
+                    <a href="#videos" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-circle-play"></i> वीडियो कोर्स</a>
+                    <a href="#pdfs" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-folder-open"></i> अध्ययन सामग्री (PDF)</a>
+                    <a href="#testimonials" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-star"></i> परिणाम/समीक्षा</a>
+                    <a href="#faqs" class="hover:bg-slate-800 px-3 py-4 transition flex items-center gap-1"><i class="fa-solid fa-circle-question"></i> सामान्य प्रश्न</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-bg py-16 lg:py-24 relative overflow-hidden border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
+    <!-- Latest Notice / Flash Ticker Bar -->
+    <div class="bg-amber-100 border-b border-amber-300 py-2 px-4 overflow-hidden flex items-center">
+        <div class="bg-amber-600 text-white text-[11px] font-extrabold px-3 py-1 rounded-r-md uppercase flex-shrink-0 z-10 flex items-center gap-1">
+            <i class="fa-solid fa-bullhorn animate-bounce"></i> सूचना पट्ट
+        </div>
+        <div class="overflow-hidden w-full ml-3">
+            <div class="animate-ticker text-xs font-bold text-slate-800">
+                🔴 कक्षा 9वीं से 12वीं तक (CBSE/UP बोर्ड) गणित के नए ऑनलाइन एवं ऑफलाइन बैच प्रारंभ | 3 दिन की फ्री डेमो क्लास के लिए अभी रजिस्ट्रेशन करें | संपर्क करें: 9027126704 |
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section (UPSSSC Portal Style) -->
+    <section class="py-10 bg-slate-200/60 border-b border-slate-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
                 
-                <!-- Left Details -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-indigo-950/80 border border-indigo-500/30 px-4 py-2 rounded-full text-xs font-semibold text-indigo-300">
-                        <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
-                        <span>Interactive Live & Offline Coaching Center</span>
-                    </div>
-                    
-                    <h2 class="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight heading-font text-white">
-                        Master Mathematics with <span class="gradient-text">Top Score Guaranteed!</span> 📐✨
-                    </h2>
-                    
-                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-                        Class 9th, 10th, 11th aur 12th ke CBSE & UP Board students ke liye <strong>Sachin Sir (B.Sc., B.Ed.)</strong> ke dwara conceptual learning, short tricks, aur board exam prep!
-                    </p>
-
-                    <!-- Feature Badges -->
-                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
-                        <span class="glass-card text-slate-200 text-xs font-semibold px-4 py-2 rounded-xl border border-slate-700/60"><i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i>Live Interactive Batches</span>
-                        <span class="glass-card text-slate-200 text-xs font-semibold px-4 py-2 rounded-xl border border-slate-700/60"><i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i>NCERT & 10-Yr PYQs</span>
-                        <span class="glass-card text-slate-200 text-xs font-semibold px-4 py-2 rounded-xl border border-slate-700/60"><i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i>Weekly Mock Tests</span>
+                <!-- Left Portal Welcome & Overview -->
+                <div class="lg:col-span-7 space-y-5">
+                    <div class="bg-white p-6 rounded-lg border border-slate-300 shadow-sm border-l-8 border-l-amber-500">
+                        <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded border border-amber-200 inline-block mb-2">
+                            उत्तर प्रदेश बोर्ड एवं CBSE हेतु समर्पित केंद्र
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight hindi-font">
+                            गणित में पाएं 100/100 अंक, आसान एवं सटीक ट्रिक्स के साथ!
+                        </h2>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mt-3 font-medium">
+                            <strong>Sachin Sir (B.Sc., B.Ed.)</strong> के मार्गदर्शन में कक्षा 9वीं, 10वीं, 11वीं एवं 12वीं के विद्यार्थियों के लिए संपूर्ण NCERT पाठ्यक्रम, शॉर्ट-कट ट्रिक्स, एवं बोर्ड परीक्षा के पिछले 10 वर्षों के प्रश्नों का गहन अभ्यास।
+                        </p>
                     </div>
 
-                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
-                        <a href="#videos" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-8 py-4 rounded-2xl transition shadow-xl shadow-indigo-600/30 flex items-center text-xs uppercase tracking-wider heading-font">
-                            Explore Courses <i class="fa-solid fa-circle-play ml-2 text-base"></i>
+                    <!-- Govt Service Portal Grid Badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <div class="bg-white p-3.5 rounded border border-slate-300 text-center shadow-sm">
+                            <i class="fa-solid fa-laptop-code text-blue-900 text-xl mb-1"></i>
+                            <h4 class="text-xs font-bold text-slate-900">ऑनलाइन लाइव क्लास</h4>
+                            <p class="text-[10px] text-slate-500">Direct Live Mentorship</p>
+                        </div>
+                        <div class="bg-white p-3.5 rounded border border-slate-300 text-center shadow-sm">
+                            <i class="fa-solid fa-school text-emerald-700 text-xl mb-1"></i>
+                            <h4 class="text-xs font-bold text-slate-900">ऑफलाइन क्लासरूम</h4>
+                            <p class="text-[10px] text-slate-500">कुराली (मेरठ) सेंटर</p>
+                        </div>
+                        <div class="bg-white p-3.5 rounded border border-slate-300 text-center shadow-sm">
+                            <i class="fa-solid fa-file-pdf text-red-600 text-xl mb-1"></i>
+                            <h4 class="text-xs font-bold text-slate-900">मुफ्त अध्ययन सामग्री</h4>
+                            <p class="text-[10px] text-slate-500">Google Drive PDFs</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <a href="#videos" class="bg-blue-900 hover:bg-slate-800 text-white font-bold px-6 py-3 rounded text-xs uppercase tracking-wider flex items-center gap-2 shadow-sm">
+                            <i class="fa-solid fa-circle-play text-amber-400"></i> वीडियो कोर्स देखें
                         </a>
-                        <a href="https://wa.me/919027126704?text=Hello%20Sachin%20Sir,%20I%20want%20to%20join%20Maths%20Batch." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-2xl transition flex items-center text-xs uppercase tracking-wider shadow-xl shadow-emerald-600/30 heading-font">
-                            <i class="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp Direct
+                        <a href="#pdfs" class="bg-slate-800 hover:bg-slate-900 text-white font-bold px-6 py-3 rounded text-xs uppercase tracking-wider flex items-center gap-2 shadow-sm">
+                            <i class="fa-solid fa-folder-open text-emerald-400"></i> नोट्स डाउनलोड करें
                         </a>
                     </div>
                 </div>
 
-                <!-- Right Demo / Inquiry Form -->
-                <div id="demo-form" class="lg:col-span-5 glass-card p-8 rounded-3xl glow-effect border border-indigo-500/30 relative">
-                    <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-[10px] font-black uppercase px-3 py-1 rounded-full shadow-lg bounce-soft">
-                        ⚡ 3 Days Free Demo Class
+                <!-- Right Student Registration Form (Govt Portal Notice Style) -->
+                <div id="demo-form" class="lg:col-span-5 bg-white rounded border-2 border-slate-300 shadow-md overflow-hidden">
+                    <div class="govt-navy text-white p-4 flex justify-between items-center border-b-2 border-amber-500">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-id-card text-amber-400 text-lg"></i>
+                            <h3 class="font-extrabold text-sm uppercase tracking-wider hindi-font">विद्यार्थी पंजीकरण फॉर्म</h3>
+                        </div>
+                        <span class="bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2 py-0.5 rounded">निःशुल्क डेमो</span>
                     </div>
 
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="bg-indigo-600/30 text-indigo-400 p-3.5 rounded-2xl border border-indigo-500/30">
-                            <i class="fa-solid fa-user-graduate text-2xl"></i>
-                        </div>
+                    <form onsubmit="sendWhatsAppQuery(event)" class="p-5 space-y-3.5 bg-slate-50">
                         <div>
-                            <h3 class="text-xl font-bold text-white heading-font">Student Registration</h3>
-                            <p class="text-xs text-slate-400">Direct message to Sachin Sir</p>
-                        </div>
-                    </div>
-                    
-                    <form onsubmit="sendWhatsAppQuery(event)" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-300 mb-1.5 uppercase tracking-wider">Student Full Name *</label>
-                            <input type="text" id="studentName" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none text-sm font-medium transition">
+                            <label class="block text-xs font-bold text-slate-700 mb-1">विद्यार्थी का नाम (Student Name) *</label>
+                            <input type="text" id="studentName" required placeholder="अपना पूरा नाम लिखें" class="w-full px-3 py-2 rounded bg-white border border-slate-300 text-slate-900 focus:border-blue-900 focus:outline-none text-xs font-medium">
                         </div>
                         <div class="grid grid-cols-2 gap-3">
                             <div>
-                                <label class="block text-xs font-bold text-slate-300 mb-1.5 uppercase tracking-wider">Class *</label>
-                                <select id="studentClass" required class="w-full px-3 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white focus:border-indigo-500 focus:outline-none text-xs font-bold transition">
-                                    <option value="Class 9th">Class 9th</option>
-                                    <option value="Class 10th">Class 10th</option>
-                                    <option value="Class 11th">Class 11th</option>
-                                    <option value="Class 12th">Class 12th</option>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">कक्षा (Class) *</label>
+                                <select id="studentClass" required class="w-full px-2 py-2 rounded bg-white border border-slate-300 text-slate-900 focus:border-blue-900 focus:outline-none text-xs font-bold">
+                                    <option value="Class 9th">कक्षा 9वीं (Class 9th)</option>
+                                    <option value="Class 10th">कक्षा 10वीं (Class 10th)</option>
+                                    <option value="Class 11th">कक्षा 11वीं (Class 11th)</option>
+                                    <option value="Class 12th">कक्षा 12वीं (Class 12th)</option>
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-300 mb-1.5 uppercase tracking-wider">Mode *</label>
-                                <select id="studentMode" required class="w-full px-3 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white focus:border-indigo-500 focus:outline-none text-xs font-bold transition">
-                                    <option value="Online Class">Online Class</option>
-                                    <option value="Offline Class">Offline Class</option>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">माध्यम (Mode) *</label>
+                                <select id="studentMode" required class="w-full px-2 py-2 rounded bg-white border border-slate-300 text-slate-900 focus:border-blue-900 focus:outline-none text-xs font-bold">
+                                    <option value="Online Class">ऑनलाइन बैच</option>
+                                    <option value="Offline Class">ऑफलाइन बैच</option>
                                 </select>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-300 mb-1.5 uppercase tracking-wider">Mobile Number *</label>
-                            <input type="tel" id="studentPhone" required placeholder="10-digit Phone Number" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none text-sm font-medium transition">
+                            <label class="block text-xs font-bold text-slate-700 mb-1">मोबाईल नंबर (Mobile No.) *</label>
+                            <input type="tel" id="studentPhone" required placeholder="10 अंकों का फोन नंबर" class="w-full px-3 py-2 rounded bg-white border border-slate-300 text-slate-900 focus:border-blue-900 focus:outline-none text-xs font-medium">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-slate-300 mb-1.5 uppercase tracking-wider">Your Message / Query *</label>
-                            <textarea id="studentMsg" rows="2" required placeholder="Apna koi bhi question ya requirements likhein..." class="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-white placeholder-slate-500 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none text-xs font-medium transition"></textarea>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">संदेश / विवरण (Message) *</label>
+                            <textarea id="studentMsg" rows="2" required placeholder="अपना विषय या कोई प्रश्न लिखें..." class="w-full px-3 py-2 rounded bg-white border border-slate-300 text-slate-900 focus:border-blue-900 focus:outline-none text-xs font-medium"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-extrabold py-3.5 rounded-xl transition shadow-lg shadow-emerald-500/20 uppercase tracking-wider text-xs flex items-center justify-center heading-font">
-                            Submit Inquiry On WhatsApp <i class="fa-brands fa-whatsapp text-lg ml-2"></i>
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3 rounded text-xs uppercase tracking-wider shadow flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> व्हाट्सएप्प पर पंजीकरण भेजें
                         </button>
                     </form>
                 </div>
@@ -187,398 +234,363 @@
         </div>
     </section>
 
-    <!-- About Teacher Section (Sachin Sir) -->
-    <section id="about-teacher" class="py-20 bg-slate-900/50 border-b border-slate-800">
+    <!-- Founder / Educator Details (Govt Profile Card) -->
+    <section id="about-teacher" class="py-12 bg-white border-b border-slate-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-card rounded-3xl p-8 sm:p-12 text-white border border-indigo-500/20 flex flex-col md:flex-row items-center gap-10">
+            <div class="govt-navy rounded-lg p-6 sm:p-10 text-white shadow-md border-b-4 border-amber-500 flex flex-col md:flex-row items-center gap-8">
                 
-                <!-- Founder Photo Container -->
+                <!-- Founder Photo -->
                 <div class="relative flex-shrink-0">
-                    <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full p-1 bg-gradient-to-tr from-amber-400 to-indigo-500 shadow-2xl">
-                        <img src="sachin-sir.jpg" alt="Sachin Sir - Founder MathMatrix Academy" class="w-full h-full object-cover rounded-full border-4 border-slate-950">
+                    <div class="w-36 h-36 sm:w-44 sm:h-44 rounded border-4 border-amber-400 bg-slate-800 p-1 shadow-lg">
+                        <img src="sachin-sir.jpg" alt="Sachin Sir - Founder LOCUS CLASSES" class="w-full h-full object-cover rounded" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Sachin+Sir&background=d97706&color=ffffff&size=180&font-size=0.33';">
                     </div>
-                    <span class="absolute bottom-2 right-2 bg-amber-400 text-slate-950 p-2.5 rounded-full text-xs shadow-lg" title="Founder & Teacher">
-                        <i class="fa-solid fa-award"></i>
-                    </span>
                 </div>
 
-                <div class="space-y-4 text-center md:text-left">
-                    <span class="bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Founder & Lead Mentor</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold heading-font text-white">Sachin Sir <span class="text-amber-400 text-xl font-bold">(B.Sc., B.Ed.)</span></h2>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
-                        Dedicated Mathematics Specialist delivering conceptually clear, board-targeted coaching for CBSE and UP Board students across Meerut & Online. Thousands of students guided toward top board scores!
+                <div class="space-y-3 text-center md:text-left">
+                    <span class="bg-amber-500 text-slate-950 text-[11px] font-extrabold px-3 py-1 rounded uppercase tracking-wider">मुख्य शिक्षक एवं संस्थापक</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Sachin Sir <span class="text-amber-400 text-lg font-bold">(B.Sc., B.Ed.)</span></h2>
+                    <p class="text-slate-200 text-xs sm:text-sm leading-relaxed max-w-2xl">
+                        गणित विशेषज्ञ एवं निर्देशक - लोकस क्लासेस। सीबीएसई एवं यूपी बोर्ड परीक्षा के छात्रों के लिए समर्पित मार्गदर्शन। वर्षों का सफल अध्यापन अनुभव एवं 100% बोर्ड परीक्षा परिणाम का रिकॉर्ड!
                     </p>
-                    <div class="flex flex-wrap justify-center md:justify-start gap-3 pt-2">
-                        <span class="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-xs font-semibold text-slate-200"><i class="fa-solid fa-certificate text-amber-400 mr-2"></i> B.Sc., B.Ed. Qualified</span>
-                        <span class="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-xs font-semibold text-slate-200"><i class="fa-solid fa-star text-amber-400 mr-2"></i> Board Exam Specialist</span>
-                        <span class="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-xs font-semibold text-slate-200"><i class="fa-solid fa-users text-amber-400 mr-2"></i> 100% Personal Guidance</span>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-2 pt-2">
+                        <span class="bg-slate-800/80 px-3 py-1.5 rounded text-xs font-bold text-amber-300 border border-slate-700"><i class="fa-solid fa-graduation-cap mr-1"></i> B.Sc., B.Ed. शैक्षणिक योग्यता</span>
+                        <span class="bg-slate-800/80 px-3 py-1.5 rounded text-xs font-bold text-amber-300 border border-slate-700"><i class="fa-solid fa-award mr-1"></i> बोर्ड परीक्षा विशेषज्ञ</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Classes / Batches Section (9th to 12th) -->
-    <section id="classes" class="py-20 bg-slate-950">
+    <!-- Batches / Classes Section (Official Grid) -->
+    <section id="classes" class="py-12 bg-slate-200/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-indigo-400 font-extrabold uppercase tracking-widest text-xs bg-indigo-950 border border-indigo-800/50 px-4 py-1.5 rounded-full">Target Batches</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3 heading-font">Class 9th to 12th Coaching</h2>
-                <p class="text-slate-400 text-sm mt-2">Comprehensive curriculum for CBSE & UP Board Examinations</p>
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-blue-900 font-extrabold uppercase tracking-wider text-xs bg-blue-100 border border-blue-200 px-3 py-1 rounded">शैक्षणिक पाठ्यक्रम</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2 hindi-font">कक्षा 9वीं से 12वीं गणित बैच विवरण</h2>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 <!-- Class 9th -->
-                <div class="glass-card p-6 rounded-3xl border border-slate-800 card-pop flex flex-col justify-between hover:border-emerald-500/50 transition">
+                <div class="portal-card p-5 rounded flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-2xl flex items-center justify-center font-bold text-xl mb-4 heading-font">
-                            09
-                        </div>
-                        <h3 class="font-bold text-white text-xl heading-font mb-1">Class 9th Maths</h3>
-                        <span class="inline-block bg-emerald-950 text-emerald-400 text-[10px] font-bold px-2.5 py-0.5 rounded-md mb-4 border border-emerald-800/40">UP Board & CBSE</span>
-                        <ul class="text-xs text-slate-300 space-y-2.5 mb-6 font-medium">
-                            <li><i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i> Strong Conceptual Foundation</li>
-                            <li><i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i> Live / Offline Interactive Classes</li>
-                            <li><i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i> Daily Assignments & Doubt Clears</li>
+                        <div class="bg-emerald-700 text-white text-xs font-extrabold px-2.5 py-1 rounded inline-block mb-3">कक्षा 9वीं</div>
+                        <h3 class="font-extrabold text-slate-900 text-lg mb-1">Class 9th Maths</h3>
+                        <p class="text-[11px] text-amber-700 font-bold mb-3">UP Board & CBSE Medium</p>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-5 font-medium">
+                            <li>• संपूर्ण NCERT अवधारणाएं एवं समाधान</li>
+                            <li>• ऑनलाइन / ऑफलाइन इंटरएक्टिव क्लास</li>
+                            <li>• दैनिक अभ्यास पत्र (Worksheets)</li>
                         </ul>
                     </div>
-                    <a href="#demo-form" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-xs transition text-center shadow-lg heading-font">
-                        Enroll in 9th Batch 🚀
+                    <a href="#demo-form" class="w-full bg-blue-900 hover:bg-slate-800 text-white font-bold py-2 rounded text-xs text-center uppercase">
+                        प्रवेश लें 🚀
                     </a>
                 </div>
 
                 <!-- Class 10th -->
-                <div class="glass-card p-6 rounded-3xl border border-slate-800 card-pop flex flex-col justify-between hover:border-blue-500/50 transition">
+                <div class="portal-card p-5 rounded flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded-2xl flex items-center justify-center font-bold text-xl mb-4 heading-font">
-                            10
-                        </div>
-                        <h3 class="font-bold text-white text-xl heading-font mb-1">Class 10th Board</h3>
-                        <span class="inline-block bg-blue-950 text-blue-400 text-[10px] font-bold px-2.5 py-0.5 rounded-md mb-4 border border-blue-800/40">Target: 100/100 Marks</span>
-                        <ul class="text-xs text-slate-300 space-y-2.5 mb-6 font-medium">
-                            <li><i class="fa-solid fa-circle-check text-blue-400 mr-2"></i> Complete NCERT & Proof Solves</li>
-                            <li><i class="fa-solid fa-circle-check text-blue-400 mr-2"></i> 10 Years Board Previous Papers</li>
-                            <li><i class="fa-solid fa-circle-check text-blue-400 mr-2"></i> Mock Board Series & Checking</li>
+                        <div class="bg-blue-800 text-white text-xs font-extrabold px-2.5 py-1 rounded inline-block mb-3">कक्षा 10वीं</div>
+                        <h3 class="font-extrabold text-slate-900 text-lg mb-1">Class 10th Board</h3>
+                        <p class="text-[11px] text-amber-700 font-bold mb-3">लक्ष्य: 100/100 बोर्ड अंक</p>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-5 font-medium">
+                            <li>• संपूर्ण NCERT एवं प्रमेय हल</li>
+                            <li>• 10 वर्षों के बोर्ड प्रश्न पत्र (PYQs)</li>
+                            <li>• साप्ताहिक टेस्ट सीरीज</li>
                         </ul>
                     </div>
-                    <a href="#demo-form" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl text-xs transition text-center shadow-lg heading-font">
-                        Enroll in 10th Batch 🎯
+                    <a href="#demo-form" class="w-full bg-blue-900 hover:bg-slate-800 text-white font-bold py-2 rounded text-xs text-center uppercase">
+                        प्रवेश लें 🎯
                     </a>
                 </div>
 
                 <!-- Class 11th -->
-                <div class="glass-card p-6 rounded-3xl border border-slate-800 card-pop flex flex-col justify-between hover:border-amber-500/50 transition">
+                <div class="portal-card p-5 rounded flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-2xl flex items-center justify-center font-bold text-xl mb-4 heading-font">
-                            11
-                        </div>
-                        <h3 class="font-bold text-white text-xl heading-font mb-1">Class 11th Core</h3>
-                        <span class="inline-block bg-amber-950 text-amber-400 text-[10px] font-bold px-2.5 py-0.5 rounded-md mb-4 border border-amber-800/40">UP Board & CBSE</span>
-                        <ul class="text-xs text-slate-300 space-y-2.5 mb-6 font-medium">
-                            <li><i class="fa-solid fa-circle-check text-amber-400 mr-2"></i> Trigonometry & Algebra Mastery</li>
-                            <li><i class="fa-solid fa-circle-check text-amber-400 mr-2"></i> Complete Calculus Fundamentals</li>
-                            <li><i class="fa-solid fa-circle-check text-amber-400 mr-2"></i> Short Tricks for Tough Problems</li>
+                        <div class="bg-amber-600 text-white text-xs font-extrabold px-2.5 py-1 rounded inline-block mb-3">कक्षा 11वीं</div>
+                        <h3 class="font-extrabold text-slate-900 text-lg mb-1">Class 11th Core</h3>
+                        <p class="text-[11px] text-amber-700 font-bold mb-3">UP Board & CBSE Medium</p>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-5 font-medium">
+                            <li>• त्रिकोणमिति एवं बीजगणित स्पेशल</li>
+                            <li>• फलन एवं कलनशास्त्र (Calculus)</li>
+                            <li>• शार्ट-कट ट्रिक्स एवं फॉर्मूले</li>
                         </ul>
                     </div>
-                    <a href="#demo-form" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded-xl text-xs transition text-center shadow-lg heading-font">
-                        Enroll in 11th Batch ⚡
+                    <a href="#demo-form" class="w-full bg-blue-900 hover:bg-slate-800 text-white font-bold py-2 rounded text-xs text-center uppercase">
+                        प्रवेश लें ⚡
                     </a>
                 </div>
 
                 <!-- Class 12th -->
-                <div class="glass-card p-6 rounded-3xl border border-slate-800 card-pop flex flex-col justify-between hover:border-purple-500/50 transition">
+                <div class="portal-card p-5 rounded flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 bg-purple-500/20 text-purple-400 border border-purple-500/30 rounded-2xl flex items-center justify-center font-bold text-xl mb-4 heading-font">
-                            12
-                        </div>
-                        <h3 class="font-bold text-white text-xl heading-font mb-1">Class 12th Target</h3>
-                        <span class="inline-block bg-purple-950 text-purple-400 text-[10px] font-bold px-2.5 py-0.5 rounded-md mb-4 border border-purple-800/40">Target: Board Topper</span>
-                        <ul class="text-xs text-slate-300 space-y-2.5 mb-6 font-medium">
-                            <li><i class="fa-solid fa-circle-check text-purple-400 mr-2"></i> Matrices, Integration & 3D Vectors</li>
-                            <li><i class="fa-solid fa-circle-check text-purple-400 mr-2"></i> Chapter-wise Revision Tests</li>
-                            <li><i class="fa-solid fa-circle-check text-purple-400 mr-2"></i> Full Board Sample Papers</li>
+                        <div class="bg-purple-800 text-white text-xs font-extrabold px-2.5 py-1 rounded inline-block mb-3">कक्षा 12वीं</div>
+                        <h3 class="font-extrabold text-slate-900 text-lg mb-1">Class 12th Target</h3>
+                        <p class="text-[11px] text-amber-700 font-bold mb-3">लक्ष्य: बोर्ड टॉपर बैच</p>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-5 font-medium">
+                            <li>• आव्यूह, समाकलन एवं 3D सदिश</li>
+                            <li>• अध्याय-वार पुनरावृत्ति परीक्षा</li>
+                            <li>• बोर्ड मॉडल पेपर अभ्यास</li>
                         </ul>
                     </div>
-                    <a href="#demo-form" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 rounded-xl text-xs transition text-center shadow-lg heading-font">
-                        Enroll in 12th Batch 🏆
+                    <a href="#demo-form" class="w-full bg-blue-900 hover:bg-slate-800 text-white font-bold py-2 rounded text-xs text-center uppercase">
+                        प्रवेश लें 🏆
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Class-Wise Video Courses Section -->
-    <section id="videos" class="py-20 bg-slate-900/60 border-y border-slate-800">
+    <!-- Video Library Section -->
+    <section id="videos" class="py-12 bg-white border-y border-slate-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <span class="text-red-700 font-extrabold uppercase tracking-wider text-xs bg-red-50 border border-red-200 px-3 py-1 rounded"><i class="fa-brands fa-youtube mr-1"></i> वीडियो व्याख्यान</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2 hindi-font">NCERT वीडियो कोर्स पोर्टल</h2>
+            </div>
+
+            <!-- Tab Filters -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button onclick="filterClass('all')" class="tab-btn active px-4 py-2 rounded text-xs font-bold uppercase transition border border-slate-300">सभी कक्षाएं</button>
+                <button onclick="filterClass('class-9')" class="tab-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2 rounded text-xs font-bold uppercase transition border border-slate-300">कक्षा 9th</button>
+                <button onclick="filterClass('class-10')" class="tab-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2 rounded text-xs font-bold uppercase transition border border-slate-300">कक्षा 10th</button>
+                <button onclick="filterClass('class-11')" class="tab-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2 rounded text-xs font-bold uppercase transition border border-slate-300">कक्षा 11th</button>
+                <button onclick="filterClass('class-12')" class="tab-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-4 py-2 rounded text-xs font-bold uppercase transition border border-slate-300">कक्षा 12th</button>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                
+                <!-- 9th -->
+                <div class="video-card class-9 portal-card p-5 rounded flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 bg-red-600 text-white rounded flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base">Class 9th Course</h3>
+                                <p class="text-[11px] text-slate-500 font-medium">Ganita Manjari (NCERT)</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                            कक्षा 9वीं गणित का पूरा NCERT वीडियो कोर्स अध्ययन हेतु उपलब्ध।
+                        </p>
+                    </div>
+                    <a href="https://www.magnetbrains.com/course/class-9th-mathematics-ganita-manjari-book-ncert-full-video-course/" target="_blank" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 rounded text-xs text-center flex items-center justify-center gap-1">
+                        वीडियो लेक्चर देखें <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 10th -->
+                <div class="video-card class-10 portal-card p-5 rounded flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 bg-red-600 text-white rounded flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base">Class 10th Course</h3>
+                                <p class="text-[11px] text-slate-500 font-medium">NCERT / CBSE Course</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                            कक्षा 10वीं बोर्ड परीक्षा हेतु अध्याय-वार संपूर्ण वीडियो समाधान।
+                        </p>
+                    </div>
+                    <a href="https://www.magnetbrains.com/course/class-10th-maths-ncert-cbse-updated-course/" target="_blank" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 rounded text-xs text-center flex items-center justify-center gap-1">
+                        वीडियो लेक्चर देखें <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 11th -->
+                <div class="video-card class-11 portal-card p-5 rounded flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 bg-red-600 text-white rounded flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base">Class 11th Course</h3>
+                                <p class="text-[11px] text-slate-500 font-medium">NCERT / CBSE Course</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                            त्रिकोणमिति एवं बीजगणित के संपूर्ण अध्याय व्याख्यान।
+                        </p>
+                    </div>
+                    <a href="https://www.magnetbrains.com/course/class-11th-maths-ncert-cbse-updated-course/" target="_blank" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 rounded text-xs text-center flex items-center justify-center gap-1">
+                        वीडियो लेक्चर देखें <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- 12th -->
+                <div class="video-card class-12 portal-card p-5 rounded flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <div class="w-10 h-10 bg-red-600 text-white rounded flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base">Class 12th Course</h3>
+                                <p class="text-[11px] text-slate-500 font-medium">भाग 1 एवं भाग 2</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+                            कक्षा 12वीं समाकलन एवं गणितीय भाग 1 और 2।
+                        </p>
+                    </div>
+                    <div class="space-y-1.5">
+                        <a href="https://www.magnetbrains.com/course/class-12th-maths-ncert-cbse-updated-course/" target="_blank" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-1.5 rounded text-[11px] text-center flex items-center justify-center gap-1">
+                            भाग 1 देखें <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                        <a href="https://www.magnetbrains.com/course/class-12th-maths-ncert-part-2-cbse-updated-course/" target="_blank" class="w-full bg-red-800 hover:bg-red-900 text-white font-bold py-1.5 rounded text-[11px] text-center flex items-center justify-center gap-1">
+                            भाग 2 देखें <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Study PDFs Section -->
+    <section id="pdfs" class="py-12 govt-navy text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10">
-                <span class="text-red-400 font-extrabold uppercase tracking-widest text-xs bg-red-950 border border-red-800/50 px-4 py-1.5 rounded-full"><i class="fa-brands fa-youtube mr-1.5"></i> Video Library</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3 heading-font">NCERT Full Video Courses</h2>
-                <p class="text-slate-400 text-sm mt-2">Select your class below to access complete video lectures:</p>
+                <span class="text-amber-400 font-extrabold uppercase tracking-wider text-xs bg-slate-800 px-3 py-1 rounded border border-slate-700">गूगल ड्राइव संग्रह</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-2 hindi-font">कक्षा-वार नोट्स एवं अभ्यास प्रश्न (PDF)</h2>
             </div>
 
-            <!-- Class Tab Filter Buttons -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button onclick="filterClass('all')" class="tab-btn active px-5 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition border border-indigo-500/30">All Classes</button>
-                <button onclick="filterClass('class-9')" class="tab-btn bg-slate-800 text-slate-300 hover:text-white px-5 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition border border-slate-700">Class 9th</button>
-                <button onclick="filterClass('class-10')" class="tab-btn bg-slate-800 text-slate-300 hover:text-white px-5 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition border border-slate-700">Class 10th</button>
-                <button onclick="filterClass('class-11')" class="tab-btn bg-slate-800 text-slate-300 hover:text-white px-5 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition border border-slate-700">Class 11th</button>
-                <button onclick="filterClass('class-12')" class="tab-btn bg-slate-800 text-slate-300 hover:text-white px-5 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition border border-slate-700">Class 12th</button>
-            </div>
-
-            <!-- Video Course Cards Grid -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 
-                <!-- Class 9th Video Card -->
-                <div class="video-card class-9 glass-card p-6 rounded-3xl border border-slate-800 card-pop flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-12 h-12 bg-red-600/20 text-red-400 border border-red-500/30 rounded-2xl flex items-center justify-center font-bold text-lg shadow-md">
-                                <i class="fa-solid fa-play"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-white text-lg heading-font">Class 9th</h3>
-                                <p class="text-[11px] text-slate-400 font-medium">Ganita Manjari (NCERT)</p>
-                            </div>
-                        </div>
-                        <p class="text-xs text-slate-300 mb-6 leading-relaxed">
-                            Full video course for Class 9th Mathematics covering all NCERT chapters step-by-step.
-                        </p>
-                    </div>
-                    <a href="https://www.magnetbrains.com/course/class-9th-mathematics-ganita-manjari-book-ncert-full-video-course/" target="_blank" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-xl text-xs transition text-center shadow-lg flex items-center justify-center heading-font">
-                        Watch Class 9th Course <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-                    </a>
-                </div>
+                <a href="https://drive.google.com/drive/u/0/folders/13BaKT3Xj-HG3pkNXcTZ__xV8jFpyD4oD" target="_blank" class="bg-slate-800 p-5 rounded border border-slate-700 hover:border-amber-400 transition text-center">
+                    <div class="w-12 h-12 bg-amber-500 text-slate-950 font-extrabold text-lg rounded flex items-center justify-center mx-auto mb-3">9th</div>
+                    <h3 class="font-bold text-white text-base mb-1">कक्षा 9वीं ड्राइव</h3>
+                    <p class="text-[11px] text-slate-300 mb-3">सूत्र सूची एवं अभ्यास प्रश्न</p>
+                    <span class="text-xs font-bold text-amber-400 underline">ड्राइव खोलें <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </a>
 
-                <!-- Class 10th Video Card -->
-                <div class="video-card class-10 glass-card p-6 rounded-3xl border border-slate-800 card-pop flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-12 h-12 bg-red-600/20 text-red-400 border border-red-500/30 rounded-2xl flex items-center justify-center font-bold text-lg shadow-md">
-                                <i class="fa-solid fa-play"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-white text-lg heading-font">Class 10th</h3>
-                                <p class="text-[11px] text-slate-400 font-medium">NCERT / CBSE Full Course</p>
-                            </div>
-                        </div>
-                        <p class="text-xs text-slate-300 mb-6 leading-relaxed">
-                            Complete Board prep video course with chapter-wise concepts & previous year solved questions.
-                        </p>
-                    </div>
-                    <a href="https://www.magnetbrains.com/course/class-10th-maths-ncert-cbse-updated-course/" target="_blank" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-xl text-xs transition text-center shadow-lg flex items-center justify-center heading-font">
-                        Watch Class 10th Course <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-                    </a>
-                </div>
+                <a href="https://drive.google.com/drive/u/0/folders/1Pz3IKDK-g_I8u8lm4Kn4xN3-cFU9KHKI" target="_blank" class="bg-slate-800 p-5 rounded border border-slate-700 hover:border-amber-400 transition text-center">
+                    <div class="w-12 h-12 bg-amber-500 text-slate-950 font-extrabold text-lg rounded flex items-center justify-center mx-auto mb-3">10th</div>
+                    <h3 class="font-bold text-white text-base mb-1">कक्षा 10वीं ड्राइव</h3>
+                    <p class="text-[11px] text-slate-300 mb-3">10 वर्षों के हल प्रश्न पत्र</p>
+                    <span class="text-xs font-bold text-amber-400 underline">ड्राइव खोलें <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </a>
 
-                <!-- Class 11th Video Card -->
-                <div class="video-card class-11 glass-card p-6 rounded-3xl border border-slate-800 card-pop flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-12 h-12 bg-red-600/20 text-red-400 border border-red-500/30 rounded-2xl flex items-center justify-center font-bold text-lg shadow-md">
-                                <i class="fa-solid fa-play"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-white text-lg heading-font">Class 11th</h3>
-                                <p class="text-[11px] text-slate-400 font-medium">NCERT / CBSE Full Course</p>
-                            </div>
-                        </div>
-                        <p class="text-xs text-slate-300 mb-6 leading-relaxed">
-                            Detailed video lectures for Trigonometry, Algebra & Calculus fundamentals.
-                        </p>
-                    </div>
-                    <a href="https://www.magnetbrains.com/course/class-11th-maths-ncert-cbse-updated-course/" target="_blank" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-xl text-xs transition text-center shadow-lg flex items-center justify-center heading-font">
-                        Watch Class 11th Course <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-                    </a>
-                </div>
+                <a href="https://drive.google.com/drive/u/0/folders/1YWEdsA1wlyGmPXNG16bRdmu3g1JmCqjJ" target="_blank" class="bg-slate-800 p-5 rounded border border-slate-700 hover:border-amber-400 transition text-center">
+                    <div class="w-12 h-12 bg-amber-500 text-slate-950 font-extrabold text-lg rounded flex items-center justify-center mx-auto mb-3">11th</div>
+                    <h3 class="font-bold text-white text-base mb-1">कक्षा 11वीं ड्राइव</h3>
+                    <p class="text-[11px] text-slate-300 mb-3">त्रिकोणमिति एवं कलनशास्त्र नोट्स</p>
+                    <span class="text-xs font-bold text-amber-400 underline">ड्राइव खोलें <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </a>
 
-                <!-- Class 12th Video Card (Part 1 & Part 2) -->
-                <div class="video-card class-12 glass-card p-6 rounded-3xl border border-slate-800 card-pop flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-12 h-12 bg-red-600/20 text-red-400 border border-red-500/30 rounded-2xl flex items-center justify-center font-bold text-lg shadow-md">
-                                <i class="fa-solid fa-play"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-white text-lg heading-font">Class 12th</h3>
-                                <p class="text-[11px] text-slate-400 font-medium">Part 1 & Part 2 Courses</p>
-                            </div>
-                        </div>
-                        <p class="text-xs text-slate-300 mb-4 leading-relaxed">
-                            Complete Board syllabus split into Part 1 & Part 2 for structured revision.
-                        </p>
-                    </div>
-                    <div class="space-y-2.5">
-                        <a href="https://www.magnetbrains.com/course/class-12th-maths-ncert-cbse-updated-course/" target="_blank" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-2.5 rounded-xl text-xs transition text-center shadow-md flex items-center justify-center heading-font">
-                            Watch Part 1 Course <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-                        </a>
-                        <a href="https://www.magnetbrains.com/course/class-12th-maths-ncert-part-2-cbse-updated-course/" target="_blank" class="w-full bg-red-800 hover:bg-red-700 text-white font-bold py-2.5 rounded-xl text-xs transition text-center shadow-md flex items-center justify-center heading-font">
-                            Watch Part 2 Course <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-                        </a>
-                    </div>
-                </div>
+                <a href="https://drive.google.com/drive/u/0/folders/1GRO1Wr03XGmpASmJBF5eLx_V4hDelBlC" target="_blank" class="bg-slate-800 p-5 rounded border border-slate-700 hover:border-amber-400 transition text-center">
+                    <div class="w-12 h-12 bg-amber-500 text-slate-950 font-extrabold text-lg rounded flex items-center justify-center mx-auto mb-3">12th</div>
+                    <h3 class="font-bold text-white text-base mb-1">कक्षा 12वीं ड्राइव</h3>
+                    <p class="text-[11px] text-slate-300 mb-3">समाकलन एवं मॉडल पेपर सेट</p>
+                    <span class="text-xs font-bold text-amber-400 underline">ड्राइव खोलें <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </a>
 
             </div>
         </div>
     </section>
 
-    <!-- Free Study Material Section (Drive Folders) -->
-    <section id="pdfs" class="py-20 bg-slate-950">
+    <!-- Student Testimonials -->
+    <section id="testimonials" class="py-12 bg-slate-200/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-400 font-extrabold uppercase tracking-widest text-xs bg-amber-950 border border-amber-800/50 px-4 py-1.5 rounded-full">Google Drive Library</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3 heading-font">Class-Wise Notes & PDFs</h2>
-                <p class="text-slate-400 text-sm mt-2">Download Chapter Formula Sheets, NCERT Solutions & Sample Papers:</p>
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-blue-900 font-extrabold uppercase tracking-wider text-xs bg-blue-100 border border-blue-200 px-3 py-1 rounded">विद्यार्थी अनुभव</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2 hindi-font">छात्रों की प्रतिक्रियाएं</h2>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <a href="https://drive.google.com/drive/u/0/folders/13BaKT3Xj-HG3pkNXcTZ__xV8jFpyD4oD" target="_blank" class="glass-card p-6 rounded-3xl border border-slate-800 hover:border-emerald-500/50 transition text-center card-pop group">
-                    <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-2xl flex items-center justify-center font-extrabold text-xl mx-auto mb-4 heading-font group-hover:scale-110 transition">9th</div>
-                    <h3 class="font-bold text-white text-lg mb-1 heading-font">Class 9th Drive</h3>
-                    <p class="text-xs text-slate-400 mb-4">NCERT Formulas & Practice Worksheets</p>
-                    <span class="text-xs font-bold text-emerald-400 flex items-center justify-center gap-1">Open Drive Folder <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
-
-                <a href="https://drive.google.com/drive/u/0/folders/1Pz3IKDK-g_I8u8lm4Kn4xN3-cFU9KHKI" target="_blank" class="glass-card p-6 rounded-3xl border border-slate-800 hover:border-blue-500/50 transition text-center card-pop group">
-                    <div class="w-14 h-14 bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded-2xl flex items-center justify-center font-extrabold text-xl mx-auto mb-4 heading-font group-hover:scale-110 transition">10th</div>
-                    <h3 class="font-bold text-white text-lg mb-1 heading-font">Class 10th Drive</h3>
-                    <p class="text-xs text-slate-400 mb-4">10-Year Board Papers & Solved Notes</p>
-                    <span class="text-xs font-bold text-blue-400 flex items-center justify-center gap-1">Open Drive Folder <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
-
-                <a href="https://drive.google.com/drive/u/0/folders/1YWEdsA1wlyGmPXNG16bRdmu3g1JmCqjJ" target="_blank" class="glass-card p-6 rounded-3xl border border-slate-800 hover:border-amber-500/50 transition text-center card-pop group">
-                    <div class="w-14 h-14 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-2xl flex items-center justify-center font-extrabold text-xl mx-auto mb-4 heading-font group-hover:scale-110 transition">11th</div>
-                    <h3 class="font-bold text-white text-lg mb-1 heading-font">Class 11th Drive</h3>
-                    <p class="text-xs text-slate-400 mb-4">Trigonometry & Calculus Notes</p>
-                    <span class="text-xs font-bold text-amber-400 flex items-center justify-center gap-1">Open Drive Folder <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
-
-                <a href="https://drive.google.com/drive/u/0/folders/1GRO1Wr03XGmpASmJBF5eLx_V4hDelBlC" target="_blank" class="glass-card p-6 rounded-3xl border border-slate-800 hover:border-purple-500/50 transition text-center card-pop group">
-                    <div class="w-14 h-14 bg-purple-500/20 text-purple-400 border border-purple-500/30 rounded-2xl flex items-center justify-center font-extrabold text-xl mx-auto mb-4 heading-font group-hover:scale-110 transition">12th</div>
-                    <h3 class="font-bold text-white text-lg mb-1 heading-font">Class 12th Drive</h3>
-                    <p class="text-xs text-slate-400 mb-4">Integration, Matrices & Board PYQs</p>
-                    <span class="text-xs font-bold text-purple-400 flex items-center justify-center gap-1">Open Drive Folder <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Student Reviews / Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-slate-900/40 border-y border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-indigo-400 font-extrabold uppercase tracking-widest text-xs bg-indigo-950 border border-indigo-800/50 px-4 py-1.5 rounded-full">Testimonials</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3 heading-font">What Our Students Say</h2>
-                <p class="text-slate-400 text-sm mt-2">Real feedback from MathMatrix Academy Board Students:</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass-card p-6 rounded-3xl border border-slate-800">
-                    <div class="text-amber-400 text-sm mb-4">
+            <div class="grid md:grid-cols-3 gap-5">
+                <div class="bg-white p-5 rounded border border-slate-300 shadow-sm">
+                    <div class="text-amber-500 text-xs mb-3">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic mb-6">
-                        "Sachin Sir ke shortcut formulas aur integration ki live classes se mera Class 12th board me Maths confidence 100% badh gaya. Highly recommended!"
+                    <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+                        "सचिन सर के शॉर्टकट फॉर्मूलों और समाकलन लाइव क्लास से मेरा कक्षा 12वीं बोर्ड परीक्षा में गणित आत्मविश्वास 100% बढ़ गया!"
                     </p>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">A</div>
-                        <div>
-                            <h4 class="font-bold text-white text-sm">Aman Sharma</h4>
-                            <p class="text-[11px] text-slate-400">Class 12th (CBSE Board)</p>
-                        </div>
-                    </div>
+                    <div class="font-bold text-slate-900 text-xs">अमन शर्मा <span class="text-slate-500 font-normal">(कक्षा 12वीं CBSE)</span></div>
                 </div>
 
-                <div class="glass-card p-6 rounded-3xl border border-slate-800">
-                    <div class="text-amber-400 text-sm mb-4">
+                <div class="bg-white p-5 rounded border border-slate-300 shadow-sm">
+                    <div class="text-amber-500 text-xs mb-3">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic mb-6">
-                        "UP Board ke NCERT examples aur Theorems ko Sachin Sir local language me itna easy bana dete hain ki 10th me mere 95/100 marks aaye!"
+                    <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+                        "यूपी बोर्ड के NCERT उदाहरणों और प्रमेयों को सचिन सर बहुत ही सरल भाषा में समझाते हैं, जिससे 10वीं में मेरे शानदार अंक आए!"
                     </p>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-sm">R</div>
-                        <div>
-                            <h4 class="font-bold text-white text-sm">Ritu Verma</h4>
-                            <p class="text-[11px] text-slate-400">Class 10th (UP Board)</p>
-                        </div>
-                    </div>
+                    <div class="font-bold text-slate-900 text-xs">रीतू वर्मा <span class="text-slate-500 font-normal">(कक्षा 10वीं UP Board)</span></div>
                 </div>
 
-                <div class="glass-card p-6 rounded-3xl border border-slate-800">
-                    <div class="text-amber-400 text-sm mb-4">
+                <div class="bg-white p-5 rounded border border-slate-300 shadow-sm">
+                    <div class="text-amber-500 text-xs mb-3">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic mb-6">
-                        "Online live class me doubt instantly clear hote hain aur Drive folder se pyqs aur sample paper easily mil jate hain."
+                    <p class="text-xs text-slate-600 leading-relaxed italic mb-4">
+                        "ऑनलाइन लाइव क्लास में डाउट तुरंत क्लियर होते हैं और गूगल ड्राइव लिंक से नोट्स डाउनलोड करना बहुत आसान है।"
                     </p>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-sm">V</div>
-                        <div>
-                            <h4 class="font-bold text-white text-sm">Vikas Kumar</h4>
-                            <p class="text-[11px] text-slate-400">Class 11th (Online Student)</p>
-                        </div>
-                    </div>
+                    <div class="font-bold text-slate-900 text-xs">विकास कुमार <span class="text-slate-500 font-normal">(कक्षा 11वीं ऑनलाइन)</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Accordion Section -->
-    <section id="faqs" class="py-20 bg-slate-950">
+    <!-- FAQs Section -->
+    <section id="faqs" class="py-12 bg-white">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="text-indigo-400 font-extrabold uppercase tracking-widest text-xs bg-indigo-950 border border-indigo-800/50 px-4 py-1.5 rounded-full">Support & Guidance</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3 heading-font">Frequently Asked Questions</h2>
+            <div class="text-center mb-10">
+                <span class="text-blue-900 font-extrabold uppercase tracking-wider text-xs bg-blue-100 border border-blue-200 px-3 py-1 rounded">सहायता केंद्र</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-2 hindi-font">अक्सर पूछे जाने वाले प्रश्न (FAQs)</h2>
             </div>
 
-            <div class="space-y-4">
-                <details class="glass-card p-6 rounded-2xl border border-slate-800 cursor-pointer group">
-                    <summary class="font-bold text-white text-sm sm:text-base flex justify-between items-center">
-                        1. Kya Online aur Offline dono batch available hain?
-                        <i class="fa-solid fa-chevron-down text-indigo-400 group-open:rotate-180 transition-transform"></i>
+            <div class="space-y-3">
+                <details class="bg-slate-50 p-4 rounded border border-slate-300 cursor-pointer">
+                    <summary class="font-bold text-slate-900 text-xs sm:text-sm flex justify-between items-center">
+                        1. क्या ऑनलाइन और ऑफलाइन दोनों बैच उपलब्ध हैं?
+                        <i class="fa-solid fa-chevron-down text-blue-900"></i>
                     </summary>
-                    <p class="text-xs sm:text-sm text-slate-300 mt-4 leading-relaxed border-t border-slate-800/80 pt-3">
-                        Haan! Aap Offline class Kurali (Meerut) center par join kar sakte hain ya ghar baithe Online Live Classes me enroll ho sakte hain.
+                    <p class="text-xs text-slate-600 mt-3 pt-2 border-t border-slate-200">
+                        हाँ! आप कुराली (मेरठ) सेंटर पर ऑफलाइन क्लास जॉइन कर सकते हैं या घर बैठे ऑनलाइन लाइव क्लासेस में एडमिशन ले सकते हैं।
                     </p>
                 </details>
 
-                <details class="glass-card p-6 rounded-2xl border border-slate-800 cursor-pointer group">
-                    <summary class="font-bold text-white text-sm sm:text-base flex justify-between items-center">
-                        2. UP Board aur CBSE Board dono ka syllabus complete karate hain?
-                        <i class="fa-solid fa-chevron-down text-indigo-400 group-open:rotate-180 transition-transform"></i>
+                <details class="bg-slate-50 p-4 rounded border border-slate-300 cursor-pointer">
+                    <summary class="font-bold text-slate-900 text-xs sm:text-sm flex justify-between items-center">
+                        2. UP बोर्ड और CBSE बोर्ड दोनों का सिलेबस कराया जाता है?
+                        <i class="fa-solid fa-chevron-down text-blue-900"></i>
                     </summary>
-                    <p class="text-xs sm:text-sm text-slate-300 mt-4 leading-relaxed border-t border-slate-800/80 pt-3">
-                        Ji haan, Sachin Sir UP Board (Hindi/English Medium) aur CBSE Board dono ke NCERT syllabus aur Previous Year Questions (PYQs) ache se cover karate hain.
+                    <p class="text-xs text-slate-600 mt-3 pt-2 border-t border-slate-200">
+                        जी हाँ, सचिन सर यूपी बोर्ड (हिंदी/अंग्रेजी माध्यम) और CBSE बोर्ड दोनों का NCERT सिलेबस एवं PYQs पूरा कवर कराते हैं।
                     </p>
                 </details>
 
-                <details class="glass-card p-6 rounded-2xl border border-slate-800 cursor-pointer group">
-                    <summary class="font-bold text-white text-sm sm:text-base flex justify-between items-center">
-                        3. Free Demo Class kaise book karein?
-                        <i class="fa-solid fa-chevron-down text-indigo-400 group-open:rotate-180 transition-transform"></i>
+                <details class="bg-slate-50 p-4 rounded border border-slate-300 cursor-pointer">
+                    <summary class="font-bold text-slate-900 text-xs sm:text-sm flex justify-between items-center">
+                        3. फ्री डेमो क्लास कैसे बुक करें?
+                        <i class="fa-solid fa-chevron-down text-blue-900"></i>
                     </summary>
-                    <p class="text-xs sm:text-sm text-slate-300 mt-4 leading-relaxed border-t border-slate-800/80 pt-3">
-                        Aap top par diye gaye Demo Form ko fill karke direct WhatsApp par message bhej sakte hain. Demo Classes 3 Days ke liye Free hain.
+                    <p class="text-xs text-slate-600 mt-3 pt-2 border-t border-slate-200">
+                        आप ऊपर दिए गए रजिस्ट्रेशन फॉर्म को भरकर सीधे व्हाट्सएप्प पर मैसेज भेज सकते हैं। डेमो क्लासेस 3 दिनों के लिए बिल्कुल फ्री हैं।
                     </p>
                 </details>
             </div>
         </div>
     </section>
 
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/919027126704?text=Hello%20Sachin%20Sir,%20I%20have%20a%20query%20about%20MathMatrix%20Academy." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-400 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110 shadow-emerald-500/30">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919027126704?text=Hello%20Sachin%20Sir,%20I%20have%20a%20query%20about%20LOCUS%20CLASSES." target="_blank" class="fixed bottom-6 right-6 bg-emerald-600 hover:bg-emerald-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
     </a>
 
-    <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-500 text-xs py-10 border-t border-slate-800/80 text-center space-y-2">
-        <p>© MathMatrix Academy by Sachin Sir (B.Sc., B.Ed.). Kurali, Meerut & Online.</p>
-        <p class="text-slate-600">Class 9th, 10th, 11th & 12th Maths Board Specialist (CBSE & UP Board).</p>
+    <!-- Official Govt-Style Footer -->
+    <footer class="govt-navy-dark text-slate-300 text-xs py-8 border-t-4 border-amber-500 text-center space-y-2">
+        <p>© LOCUS CLASSES by Sachin Sir (B.Sc., B.Ed.). Kurali, Meerut & Online Learning Portal.</p>
+        <p class="text-slate-400">Class 9th, 10th, 11th & 12th Mathematics Specialist (CBSE & UP Board).</p>
     </footer>
 
-    <!-- JavaScript Handlers & Tab Filter Script -->
+    <!-- Filter Script -->
     <script>
         function sendWhatsAppQuery(event) {
             event.preventDefault();
@@ -588,13 +600,13 @@
             const phone = document.getElementById('studentPhone').value;
             const msg = document.getElementById('studentMsg').value;
 
-            const text = `Hello Sachin Sir, I have an Inquiry for MathMatrix Academy:%0A%0A*Name:* ${name}%0A*Class:* ${studentClass}%0A*Mode:* ${mode}%0A*Phone:* ${phone}%0A*Message:* ${msg}`;
+            const text = `Hello Sachin Sir, I have an Inquiry for LOCUS CLASSES:%0A%0A*Name:* ${name}%0A*Class:* ${studentClass}%0A*Mode:* ${mode}%0A*Phone:* ${phone}%0A*Message:* ${msg}`;
             window.open(`https://wa.me/919027126704?text=${text}`, '_blank');
         }
 
         function filterClass(className) {
             const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('active', 'bg-indigo-600', 'text-white'));
+            buttons.forEach(btn => btn.classList.remove('active'));
 
             event.target.classList.add('active');
 
